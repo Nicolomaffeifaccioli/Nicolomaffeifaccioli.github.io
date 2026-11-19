@@ -74,7 +74,7 @@ address {
 .research section { scroll-margin-top: 1.5rem; }
 .research section + section { margin-top: 3.5rem; }
 h2 {
-  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-size: clamp(1.4rem, 2.1vw, 1.7rem);
   font-weight: 650;
   line-height: 1.12;
   letter-spacing: -.045em;
@@ -82,10 +82,10 @@ h2 {
   border-bottom: 1px solid #aabbd0;
 }
 .paper { padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
-h3 { font-size: clamp(1.05rem, 1.45vw, 1.2rem); line-height: 1.26; font-weight: 600; }
+h3 { font-size: 1rem; line-height: 1.26; font-weight: 600; }
 h3 a { text-decoration: underline; text-decoration-color: #aabbd0; text-decoration-thickness: 1px; }
 h3 a:hover { color: #275c92; text-decoration-color: currentColor; }
-.paper p { margin: .3rem 0 0; color: var(--muted); font-size: .9rem; }
+.paper p { margin: .3rem 0 0; color: var(--muted); font-size: .875rem; }
 .paper .paper-note { color: #334f6f; font-size: .875rem; }
 .footer {
   display: flex;
