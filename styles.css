@@ -28,27 +28,6 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .skip:focus { transform: none; }
 .shell { width: min(76rem, calc(100% - 5rem)); margin-inline: auto; }
-.masthead {
-  color: var(--navy);
-  border-bottom: 1px solid var(--line);
-}
-.masthead-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  column-gap: 2rem;
-  row-gap: .8rem;
-  padding-block: 1rem;
-}
-.identity {
-  font-size: 1.08rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-nav { display: flex; flex-wrap: wrap; gap: .45rem clamp(.8rem, 2.2vw, 1.9rem); }
-nav a { color: var(--muted); font-size: .875rem; text-decoration: none; }
-nav a:hover, .identity:hover { color: var(--navy); text-decoration: underline; }
 .layout {
   display: grid;
   grid-template-columns: minmax(16rem, 18rem) minmax(0, 1fr);
@@ -56,7 +35,13 @@ nav a:hover, .identity:hover { color: var(--navy); text-decoration: underline; }
   gap: clamp(2.4rem, 6vw, 6rem);
   padding-block: clamp(2rem, 5vw, 4.6rem) 4rem;
 }
-.profile { color: var(--navy); }
+.profile {
+  position: sticky;
+  top: 1.5rem;
+  max-height: calc(100dvh - 3rem);
+  overflow: auto;
+  color: var(--navy);
+}
 .portrait {
   margin: 0 0 1.6rem;
   width: 100%;
@@ -89,18 +74,18 @@ address {
 .research section { scroll-margin-top: 1.5rem; }
 .research section + section { margin-top: 3.5rem; }
 h2 {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
   font-weight: 650;
   line-height: 1.12;
   letter-spacing: -.045em;
   padding-bottom: 1rem;
   border-bottom: 1px solid #aabbd0;
 }
-.paper { padding: 1.3rem 0; border-bottom: 1px solid var(--line); }
-h3 { font-size: clamp(1.125rem, 1.65vw, 1.35rem); line-height: 1.26; font-weight: 600; }
+.paper { padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
+h3 { font-size: clamp(1.05rem, 1.45vw, 1.2rem); line-height: 1.26; font-weight: 600; }
 h3 a { text-decoration: underline; text-decoration-color: #aabbd0; text-decoration-thickness: 1px; }
 h3 a:hover { color: #275c92; text-decoration-color: currentColor; }
-.paper p { margin: .3rem 0 0; color: var(--muted); font-size: .94rem; }
+.paper p { margin: .3rem 0 0; color: var(--muted); font-size: .9rem; }
 .paper .paper-note { color: #334f6f; font-size: .875rem; }
 .footer {
   display: flex;
@@ -115,5 +100,10 @@ h3 a:hover { color: #275c92; text-decoration-color: currentColor; }
 @media (max-width: 760px) {
   .shell { width: calc(100% - 2rem); }
   .layout { grid-template-columns: minmax(0, 1fr); }
-  .profile { width: min(100%, 29rem); }
+  .profile {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    width: min(100%, 29rem);
+  }
 }

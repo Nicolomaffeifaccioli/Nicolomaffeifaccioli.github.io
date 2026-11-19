@@ -12,4 +12,4 @@ GitHub displays the live URL under **Settings → Pages** when deployment finish
 
 ## Edit the site
 
-Edit the profile and research entries in `index.html`. The colors, typography, and responsive layout are in `styles.css`. The profile and research scroll as part of one document.
+Edit the profile and research entries in `index.html`. The colors, typography, and responsive layout are in `styles.css`. The profile stays visible beside the research on desktop and sits above it on smaller screens.
